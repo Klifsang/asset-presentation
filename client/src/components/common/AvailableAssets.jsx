@@ -11,7 +11,7 @@ const AvailableAssets = () => {
   const [assets, setAssets] = useState([]);
 
   const getAssets = async () => {
-    const response = await HttpClient.get("api/assets/get");
+    const response = await HttpClient.get("/api/assets/get");
     console.log(response.data);
     setAssets(response.data);
   };
@@ -21,7 +21,7 @@ const AvailableAssets = () => {
   }, []);
 
   const requestAsset = async (id) => {
-    const response = await HttpClient.post("api/requests/add", {
+    const response = await HttpClient.post("/api/requests/add", {
       assetId: id,
       userId: user.id,
       comment: "urgent request",

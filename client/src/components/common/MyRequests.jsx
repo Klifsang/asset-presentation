@@ -57,7 +57,7 @@ const MyRequests = () => {
   const [requests, setRequests] = useState([]);
 
   const getRequests = async ()=> {
-    const response = await HttpClient.get("api/myrequests/get");
+    const response = await HttpClient.get("/api/myrequests/get");
     console.log(response.data);
     setRequests(response.data);
   }
@@ -67,7 +67,7 @@ const MyRequests = () => {
   }, []);
 
   const deleteRequest = async (id) => {
-    const response = await HttpClient.delete(`api/requests/delete/${id}`);
+    const response = await HttpClient.delete(`/api/requests/delete/${id}`);
     getRequests();
     console.log(response.data);
   };

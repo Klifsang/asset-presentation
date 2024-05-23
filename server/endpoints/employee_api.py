@@ -14,7 +14,7 @@ def register_employee():
     role = data.get('role')
     level = "employee"
     status = "pending"
-    employee = Employee(username=username,level=level, department=department, address=address,email=email,phonenumber=phonenumber,password=bcrypt.generate_password_hash(password), role=role, status=status)
+    employee = Employee(username=username,level=level, department=department, address=address,email=email,phonenumber=phonenumber,password=bcrypt.generate_password_hash(password).decode('utf-8'), role=role, status=status)
     
     db.session.add(employee)
     db.session.commit()

@@ -21,7 +21,7 @@ export default function SignUp({ toggleSignUp }) {
       return;
     }
     try {
-      const response = await HttpClient.post("api/staff/register", {
+      const response = await HttpClient.post("/api/staff/register", {
         username: username,
         address: address,
         email: email,
