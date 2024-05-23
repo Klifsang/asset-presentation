@@ -6,7 +6,7 @@ load_dotenv()
 class ApplicationConfig:
     SECRET_KEY = 'dfsadfdtddasxfta'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    # SQLALCHEMY_ECHO = True
+    SQLALCHEMY_ECHO = True
     # postgresql://postgres:DWJNNRBfzxviIeroiZkubofqvDueDhUy@viaduct.proxy.rlwy.net:21766/railway
     SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:SKvaWWAKQuCdDRpgzWhcGqHLZIrEUFNE@monorail.proxy.rlwy.net:28073/railway' 
     # SQLALCHEMY_DATABASE_URI = r"sqlite:///./app.sqlite"
