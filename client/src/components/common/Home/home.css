@@ -1,0 +1,71 @@
+.h-left{
+    width: 50%;
+    margin-top: 120px;
+}
+
+.btn{
+    margin: 30px 0;
+}
+.h-wrap{
+    gap: 5rem;
+   
+}
+.image-container{
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    background-color: rgb(123, 193, 233);
+    border-radius: 20px;
+    position: relative;
+    z-index: auto;
+}
+.image-container>img{
+    margin-top: -30px;
+    
+}
+.image-container>:nth-child(2){
+    position: absolute;
+    
+    
+}
+.image-container>:nth-child(3){
+    position: absolute;
+    z-index: -2;
+    right: 80%;
+    bottom: -15%;
+}
+.stats{
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 60px;
+}
+.stat>:nth-child(1){
+    font-size: 2rem;
+    font-weight: 700;
+}
+.stat>:nth-child(1)>:last-child{
+    color: rgb(25, 105, 209);
+}
+@media (max-width: 640px) {
+    .h-left{
+        width: 80%;
+    }
+    .image-container{
+        width: 90%;
+        position: relative;
+    }
+    .dot1{
+        position: absolute;
+        top: 0;
+        right: -20%;
+    }
+    .dot2{
+        position: absolute;
+
+    }
+    
+    
+  }
+
+

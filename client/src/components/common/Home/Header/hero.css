@@ -1,0 +1,10 @@
+.nav-wrapper a {
+    color: black; /* Replace with your desired color */
+   
+  }
+  nav{
+    box-shadow: none !important;
+    width: 100%;
+    background-color: white;
+  }
+  
