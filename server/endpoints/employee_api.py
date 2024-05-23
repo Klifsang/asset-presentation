@@ -14,7 +14,26 @@ def register_employee():
     role = data.get('role')
     level = "employee"
     status = "pending"
-    employee = Employee(username=username,level=level, department=department, address=address,email=email,phonenumber=phonenumber,password=bcrypt.generate_password_hash(password).decode('utf-8'), role=role, status=status)
+    
+    if not password:
+        return {"error": "Password is required"}, 400
+
+    print(f"Password: {password}")  # Debugging: log the password
+
+    hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+    print(f"Hashed Password: {hashed_password}")  # Debugging: log the hashed password
+    
+    employee = Employee(
+        username=username,
+        level=level,
+        department=department,
+        address=address,
+        email=email,
+        phonenumber=phonenumber,
+        password=hashed_password,
+        role=role,
+        status=status
+    )
     
     db.session.add(employee)
     db.session.commit()
